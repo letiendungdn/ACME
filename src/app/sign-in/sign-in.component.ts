@@ -7,11 +7,14 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
+  usernamePattern = /^[a-z]{6,32}$/i;
+  passwordPattern = /^(?=.*[!@#$%^&*]+)[a-z0-9!@#$%^&*]{6,32}$/;
+
   userInfo = {
     userName: 'tiepphan',
     password: '',
     rememberMe: true,
-  }
+  };
 
   constructor() {}
 
